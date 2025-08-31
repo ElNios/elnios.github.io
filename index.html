@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>林長陞 — 創意設計作品集</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 滑鼠跟隨光效 -->
+<div class="mouse-glow" id="mouseGlow"></div>
+
+<!-- 美感化背景形狀 -->
+<div id="backgroundShapes" aria-hidden="true">
+  <!-- 柔和漸層圓形分佈 -->
+  <div class="shape circle1 micro" data-speed="0.8" style="top: 10%; left: 15%;"></div>
+  <div class="shape circle2 small" data-speed="0.6" style="top: 20%; right: 20%;"></div>
+  <div class="shape circle3 mini" data-speed="1.0" style="top: 35%; left: 8%;"></div>
+  <div class="shape circle4 medium" data-speed="0.4" style="top: 50%; right: 12%;"></div>
+  <div class="shape circle5 large" data-speed="0.7" style="top: 65%; left: 25%;"></div>
+  <div class="shape circle1 giant" data-speed="0.3" style="top: 80%; right: 30%;"></div>
+  
+  <div class="shape circle2 mini" data-speed="0.9" style="top: 15%; left: 60%;"></div>
+  <div class="shape circle3 small" data-speed="0.5" style="top: 30%; right: 45%;"></div>
+  <div class="shape circle4 micro" data-speed="1.2" style="top: 45%; left: 75%;"></div>
+  <div class="shape circle5 medium" data-speed="0.8" style="top: 60%; right: 60%;"></div>
+  <div class="shape circle1 mini" data-speed="1.1" style="top: 75%; left: 50%;"></div>
+  
+  <div class="shape circle2 micro" data-speed="1.3" style="top: 5%; left: 40%;"></div>
+  <div class="shape circle3 large" data-speed="0.6" style="top: 25%; right: 5%;"></div>
+  <div class="shape circle4 small" data-speed="0.9" style="top: 40%; left: 35%;"></div>
+  <div class="shape circle5 mini" data-speed="1.0" style="top: 55%; right: 25%;"></div>
+  <div class="shape circle1 medium" data-speed="0.7" style="top: 70%; left: 70%;"></div>
+  <div class="shape circle2 micro" data-speed="1.4" style="top: 85%; right: 15%;"></div>
+  
+  <div class="shape circle3 mini" data-speed="0.8" style="top: 12%; left: 85%;"></div>
+  <div class="shape circle4 small" data-speed="1.1" style="top: 28%; right: 70%;"></div>
+  <div class="shape circle5 micro" data-speed="1.5" style="top: 42%; left: 5%;"></div>
+  <div class="shape circle1 large" data-speed="0.5" style="top: 58%; right: 80%;"></div>
+  <div class="shape circle2 medium" data-speed="0.9" style="top: 72%; left: 15%;"></div>
+  <div class="shape circle3 mini" data-speed="1.2" style="top: 88%; right: 50%;"></div>
+</div>
+
+
+
+<!-- 導航列 -->
+<header role="banner" aria-label="主導覽">
+  <div class="brand" aria-label="網站名稱">XXX</div>
+  <nav role="navigation" aria-label="主選單">
+    <a href="#" data-page="home" tabindex="0" class="active">首頁</a>
+    <a href="#" data-page="portfolio" tabindex="0">文學創作</a>
+    <a href="#" data-page="music" tabindex="0">音樂創作</a>
+    <a href="#" data-page="art" tabindex="0">藝術作品</a>
+    <a href="#" data-page="games" tabindex="0">小遊戲</a>
+  </nav>
+</header>
+
+<main>
+  <!-- 首頁 -->
+  <div id="home" class="page active">
+    <section aria-label="首頁介紹" role="region">
+      <div id="homePanel">
+        <h1>創意與設計的匯流</h1>
+        
+        <div class="portfolio-grid">
+          <div class="portfolio-card" data-page="portfolio" role="button" aria-label="前往文學創作">
+            <div class="card-icon">📝</div>
+            <h3>文學創作</h3>
+          </div>
+          
+          <div class="portfolio-card" data-page="music" role="button" aria-label="前往音樂創作">
+            <div class="card-icon">🎵</div>
+            <h3>音樂創作</h3>
+          </div>
+          
+          <div class="portfolio-card" data-page="art" role="button" aria-label="前往藝術作品">
+            <div class="card-icon">🎨</div>
+            <h3>藝術作品</h3>
+          </div>
+          
+          <div class="portfolio-card" data-page="games" role="button" aria-label="前往小遊戲">
+            <div class="card-icon">🎮</div>
+            <h3>小遊戲</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 文學創作頁面 -->
+  <div id="portfolio" class="page">
+    <section class="content-panel" role="region" aria-label="文學創作">
+      <!-- 幾何裝飾元素 -->
+      <div class="geometric-decoration triangle"></div>
+      <div class="geometric-decoration diamond"></div>
+      <div class="geometric-decoration hexagon"></div>
+      
+      <h2>文學創作</h2>
+      
+      <!-- 橫排子項導航 -->
+      <div class="sub-nav">
+        <div class="sub-nav-item active" data-sub="novel">小說</div>
+        <div class="sub-nav-item" data-sub="article">文章</div>
+        <div class="sub-nav-item" data-sub="narrative">敘事結構</div>
+      </div>
+
+      <!-- 子項內容區域 -->
+      <div class="sub-content active" id="novel-content">
+        <div class="sub-content-item">
+          <h3>小說簡介展示</h3>
+          <div class="novel-content">
+            <h4>Dust</h4>
+            <p>在這沉寂的世界中......無人生還
+沒有任何生機，消極的意識遍歷著每一個角落
+在這片近乎只有「灰」與「塵」的大地上
+僅存的生命勉強活著，只為等待氣絕的那一刻
+生命死亡時，由他生前留下的印象幻化為塵
+有的塵綺麗而動人，有的醜陋而滲人
+塵具有些許的意識與記憶，但越是努力回想
+身上的裂紋就會越明顯，直到想起的那一刻便化作塵埃
+唯有遺忘，才能長久的「存在」
+“選擇性的記住，再選擇性的遺忘，這是我們的生存方式”
+灰是一種特殊物質，接觸灰可以進行「構造」，從泥土、植物、乃至塵都可以被構造出來
+然而構造會讓他們永久的回想起生前的自我
+有意識的塵建立了屬於它們的「家」
+為了維持存在而互相記得讓彼此遺忘
+這世界的一切都平等的被拋棄，平等的被遺忘，直至消亡
+或許對他們而言，只能依靠灰一個個犧牲，直到讓世界煥發生機</p>
+            <h4>光環律</h4>
+            <p>所有人都會在成年洗禮時，獲得相應的「光環」
+持有光環會清楚的認知到自己所扮演的「角色」
+主角光環，所有故事的中心
+一旦主角誕生，周遭的萬物都會為了迎合他而改變
+世界會為了主角而服務，為了讓主角成功而無所不用其極
+光環將會帶來「敘事權重」的能力
+敘事權重的等級影響能改變世界的權限，機率、合理性、存在感、記憶等
+近乎世間萬物都能被敘事權重影響
+而光環律講述的是少女「蓮」在成年後沒有經過洗禮，作為世界之外的存在而努力生存的故事</p>
+            <h4>倖存者偏差</h4>
+            <p>世界無時無刻不在改變
+便利商店的名稱變了，常去的餐廳朋友卻不記得，以為死了的人卻還活著
+蘋果變成了白色，雨水極其緩慢，原來的學生會長消失了
+這種現象我稱之為「偏差」
+高中三年級的少年弗卡夏，能看見偏差的少數人
+記錄著這異常的世界，尋找偏差的規律
+與同樣能看見偏差的人相遇，一同建立了異常研究社「E.D.E.N」
+渡過日常與異常交織的故事</p>
+            <h4>喜歡劇透的旁白君</h4>
+            <p>歡迎回來
+那麼，再次向您簡單介紹，我叫「旁白君」，負責朗讀劇本、引導故事的人
+只不過呢...我有個壞毛病——
+我超愛劇透。
+是的，我就是那種在電影開頭會說「那個人等下會死」的超級討厭鬼。
+雖然給製作組添了不少麻煩，但「說不定劇透也是劇本的一部分」這點不覺得很有趣嗎！
+真假參半的劇透，非但沒有刪去了可能性，反而拋出問題讓觀眾反思。或是假劇透之後讓觀眾
+產生「不會發生」的認知，隨後當它再次發生時的驚喜感———實在是太美妙了！
+說到這裡，你可能已經猜到了，這是一篇帶有 meta 要素的戀愛喜劇。
+你說戀愛在哪裡？別急，到第三章就知道了，先聽我繼續說明
+總之，你所看到的每一場相遇、每一次選擇、每一句台詞乃至現在看到的這一幕，都是設計好
+的一部分。
+觀眾的注視與支持，就是這個世界存在的理由。
+而我們製作組負責持續的創造劇本，好讓世界運行下去。
+究竟旁白君我、製作組與觀眾之間會有怎樣的劇本呢？好期待呀~</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-content" id="article-content">
+        <div class="sub-content-item">
+          <h3>文章展示</h3>
+          <div class="article-content">
+            <h4>血緣的胎記</h4>
+            <p>我們帶著血緣的胎記降生，卻在學會書寫「愛」之前，先被刻上了「應當去愛」的古老咒語。
+世俗總將親情供奉在玻璃殿堂中
+母親的笑容永遠溫柔，父親的肩膀永遠可靠
+在他人眼中澄澈而美麗，可現實卻耐不住敲打。病房前遞藥的手或許顫抖著盤算遺產，年夜飯
+的煙火氣裡漂浮著無法說出的夢想與妥協。
+樹脂封住甲蟲的那一刻，它並非溫柔的保存，而是一種無法脫離的桎梏。
+拼命掙扎直至消亡，從「生命」變成「所有物」，最終淪為標本。
+親情有時像這樣的琥珀——以「愛」之名，將彼此鎖進不容反抗的位置。
+我們被視為理所當然的子女、父母、手足，彷彿彼此的情感與角色只是一種被占有的權利，而
+不是可以重新定義的關係。
+若有一天，我們成為了琥珀，是否又會重複著難以釐清的愛？
+我想愛與被愛之間，從來都不是血緣或歸屬，而是我們願意接納彼此。
+希望那時我能記起今天的思索，記起那些曾經無法說出口的話、曾期盼的鼓勵或安慰——然後，
+把它好好地還給下一個生命
+也或許是我錯看了琥珀，畢竟它並非是單純的桎梏，也可以是歲月替我們封存的回憶——在離
+別之後，仍能閃爍著曾經的微光。
+我在那天雨夜裡接過母親越洋寄來的胃藥，郵戳日期正是我 LINE 動態裡說失眠的那天。這種
+笨拙的關懷像針腳歪斜的圍巾，卻依然帶著體溫。
+血緣或許是最原始的創傷，卻在反覆潰爛與癒合中長成獨特的疤痕。
+我曾想，血緣興許只是難以脫離的友情
+友情彷彿月光下的對酌。既是說不出的要好，卻是需要不斷擦拭杯沿才得以維持清亮。
+親情更像老舊的木製餐桌。吸納著過往的舊塵與潮氣，卻又能承受再一次的相聚。
+我們無法選擇與誰為伴，但那些早已成為習慣的日常——早出晚歸的問候、冰箱裡封好的菜、
+夜裡替你關好的窗——日復一日地提醒著我們：這裡，是有人等著你回來的地方。
+颱風過境的清晨，我偶然看見被掀翻的蟻穴。工蟻們用顎齒銜著幼蟲在泥濘中遷移，它們不懂
+得何謂血緣與親情，只是本能驅動著，在廢墟上重建名為「家」的迷宮。這或許就是親情最真
+實的樣貌——毫無理由但也最原始的生命衝動。
+我們帶著血緣的胎記降生，也終將在學會「愛為何物」之後，選擇「真正的去愛」</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-content" id="narrative-content">
+        <div class="sub-content-item">
+          <h3>敘事結構研究</h3>
+          <div class="narrative-content">
+            <h4>樹狀敘事設計</h4>
+            <p>具有無限延伸、可回溯性以及高自由度框架作為基礎
+六節點為一輪，可以是事件、世界觀、問題的解構形式等
+Seed（種子）：概念的基礎、事件的起點
+Root（根）：動機、世界觀背景的延伸
+Trunk（樹幹）：主線、主題的展開、主要衝突
+Branch（枝幹）：分支的事件、不同的視角、可能性
+Leaf（葉）：細節的展現，事件的交匯或催化
+Fruit（果實）：事件結局，答案，帶來改變、新的種子
+樹狀圖可精確管理事件的節點位置（以節點首字大寫表示），可以將節點無窮樹狀化，細化內
+容防止吃書
+將時間和節點進行完整分類，給事件設置過去與未來光錐確保故事具有不同可能性，也方便留
+下外傳、平行世界或其他層面的可能性
+敘事樹框架之下，需再建立「勾子」
+即「吸引人的點」
+展開來說四個層面：
+1.內容層（主要的內容吸引力）
+2.結構層（敘事的節奏和整體結構）
+3.影響層（引發討論與解讀，或對後續作品產生的影響）
+內容層可採用的設計
+1.反常（吸引人的第一步，脫離常規的內容塑造）
+2.時間（時空相關）
+3.高風險承諾（給予超出預期的事件與風險，回收前有高期待，回收成功則產生高報酬）
+4.道德兩難（人性抉擇與反思，同時提供影響層）
+5.關係張力（身份反轉、權力、秘密等）
+6.題材融合（如職場 X 怪談）
+7.差異化（預期之外，情理之內）
+8.好奇心（拋出問題或疑點，誰、為什麼、怎麼可能）
+9.角色成長(獲得、失去了甚麼，內心變化)
+結構層
+1.動機與強慾望，為何「必須現在」
+2.阻力，對抗的過程形成期待
+3.代價，賦予相應的代價昇華主題
+4.轉折，劇情中的轉折點或反轉，並藉此引出新的勾子
+影響層
+讓人記得你的作品，或能帶來明確情緒的理由
+1.強烈視覺
+2.反常
+3.情感凝聚
+4.伏筆回收
+5.媒體傳播性、梗</p>
+          </div>
+          <img src="assets/images/敘事結構.drawio.png" alt="敘事結構圖" style="max-width: 100%; height: auto; margin-top: 20px;">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 音樂創作頁面 -->
+  <div id="music" class="page">
+    <section class="content-panel" role="region" aria-label="音樂創作">
+      <!-- 幾何裝飾元素 -->
+      <div class="geometric-decoration triangle"></div>
+      <div class="geometric-decoration diamond"></div>
+      <div class="geometric-decoration hexagon"></div>
+      
+      <h2>音樂創作</h2>
+      
+      <!-- 橫排子項導航 -->
+      <div class="sub-nav">
+        <div class="sub-nav-item active" data-sub="song">歌曲</div>
+        <div class="sub-nav-item" data-sub="bgm">背景音樂</div>
+      </div>
+
+      <!-- 子項內容區域 -->
+      <div class="sub-content active" id="song-content">
+        <div class="sub-content-item">
+          <h3>AI歌曲結合人工微調</h3>
+          <p>這裡將展示AI生成式歌曲。</p>
+          <div class="audio-player">
+            <h4>いつかの日</h4>
+            <audio controls src="assets/audio/ItsukaNoHi.mp3"></audio>
+            <h4>忘れられた色</h4>
+            <audio controls src="assets/audio/WasuretaIro.mp3"></audio>
+            <h4>泡沫の夢を閉じ込めて</h4>
+            <audio controls src="assets/audio/UtakataNoYume.mp3"></audio>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-content" id="bgm-content">
+        <div class="sub-content-item">
+          <h3>AI.bgm結合人工微調</h3>
+          <p>這裡將展示各種背景音樂，適用於不同場景和氛圍的音樂。</p>
+          <div class="audio-player">
+            <h4>BA</h4>
+            <audio controls src="assets/audio/BA.mp3"></audio>
+            <h4>Fun.n.k</h4>
+            <audio controls src="assets/audio/Funk.mp3"></audio>
+            <h4>Midnight Symphony</h4>
+            <audio controls src="assets/audio/MidnightSymphony.mp3"></audio>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 藝術作品頁面 -->
+  <div id="art" class="page">
+    <section class="content-panel" role="region" aria-label="藝術作品">
+      <!-- 幾何裝飾元素 -->
+      <div class="geometric-decoration triangle"></div>
+      <div class="geometric-decoration diamond"></div>
+      <div class="geometric-decoration hexagon"></div>
+      
+      <h2>藝術作品</h2>
+      
+      <!-- 橫排子項導航 -->
+      <div class="sub-nav">
+        <div class="sub-nav-item active" data-sub="design">平面設計</div>
+        <div class="sub-nav-item" data-sub="illustration">插畫</div>
+        <div class="sub-nav-item" data-sub="webdesign">網頁設計</div>
+      </div>
+
+      <!-- 子項內容區域 -->
+      <div class="sub-content active" id="design-content">
+        <div class="sub-content-item">
+          <h3>平面設計作品</h3>
+          <p>這裡將展示各種平面設計作品，包括海報設計、品牌視覺、包裝設計等。</p>
+          <div class="image-gallery">
+            <img src="assets/images/0.png" alt="平面設計作品1">
+            <img src="assets/images/1.png" alt="平面設計作品2">
+            <img src="assets/images/3.png" alt="平面設計作品3">
+            <img src="assets/images/Sun.png" alt="平面設計作品4">
+            <img src="assets/images/未命名-1.png" alt="平面設計作品5">
+            <img src="assets/images/突出分割.png" alt="平面設計作品6">
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-content" id="illustration-content">
+        <div class="sub-content-item">
+          <h3>插畫作品展示</h3>
+          <p>施工中</p>
+        </div>
+      </div>
+
+      <div class="sub-content" id="webdesign-content">
+        <div class="sub-content-item">
+          <h3>網頁設計作品</h3>
+          <p>AI生成式網站</p>
+          <ul class="link-list">
+            <li><a href="https://elnios-o4fu7l.manus.space/" target="_blank">Elnios 網站</a></li>
+            <li><a href="https://dataviz-2h8vaf.manus.space/" target="_blank">數據可視化網站</a></li>
+            <li><a href="https://catcafe-jf285k.manus.space/" target="_blank">貓咪咖啡廳網站</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 小遊戲頁面 -->
+  <div id="games" class="page">
+    <section class="content-panel" role="region" aria-label="小遊戲">
+      <!-- 幾何裝飾元素 -->
+      <div class="geometric-decoration triangle"></div>
+      <div class="geometric-decoration diamond"></div>
+      <div class="geometric-decoration hexagon"></div>
+      
+      <h2>小遊戲</h2>
+      
+      <!-- 橫排子項導航 -->
+      <div class="sub-nav">
+        <div class="sub-nav-item active" data-sub="survivor">類倖存者</div>
+        <div class="sub-nav-item" data-sub="card">卡牌</div>
+      </div>
+
+      <!-- 子項內容區域 -->
+      <div class="sub-content active" id="survivor-content">
+        <div class="sub-content-item">
+          <h3>類倖存者遊戲</h3>
+          <p>Gacha Buncha製作中</p>
+        </div>
+      </div>
+
+      <div class="sub-content" id="card-content">
+        <div class="sub-content-item">
+          <h3>卡牌遊戲作品</h3>
+          <p>拚好卡製作中</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 數據管理頁面 -->
+  <div id="data-management" class="page">
+    <section class="data-panel" role="region" aria-label="數據管理">
+      <h2>數據管理</h2>
+      
+      <div class="password-form">
+        <input type="password" id="passwordInput" class="password-input" placeholder="請輸入密碼">
+        <button id="passwordBtn" class="password-btn">驗證</button>
+        <div id="errorMessage" class="error-message"></div>
+        <div id="loadingMessage" class="loading"></div>
+      </div>
+
+      <div id="dataStats" class="data-stats">
+        <div class="stat-item">
+          <div class="stat-title">網站總瀏覽次數</div>
+          <div class="stat-value" id="totalViews">0</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-title">不重複設備數</div>
+          <div class="stat-value" id="uniqueDevices">0</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-title">內容點擊統計</div>
+          <div class="click-stats" id="clickStats">
+            <!-- 動態生成點擊統計 -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 林長陞. All rights reserved</p>
+  <a href="#" class="data-management-link" data-page="data-management">數據管理</a>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
