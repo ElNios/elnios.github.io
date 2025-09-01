@@ -964,3 +964,191 @@ footer {
 }
 
 
+
+
+/* 小說和文章按鈕樣式 */
+.novel-buttons, .article-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.novel-btn, .article-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.novel-btn::before, .article-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #f093fb);
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 1px;
+}
+
+.novel-btn:hover, .article-btn:hover,
+.novel-btn.active, .article-btn.active {
+  border-color: rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 147, 251, 0.1) 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+.novel-btn:hover::before, .article-btn:hover::before,
+.novel-btn.active::before, .article-btn.active::before {
+  width: 100%;
+}
+
+.novel-text, .article-text {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #cccccc;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left;
+  white-space: pre-wrap; /* 保留換行符 */
+}
+
+/* 關於我頁面樣式 */
+.about-me-panel {
+  min-height: 60vh; /* 確保頁面有足夠高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me-panel h2 {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.about-me-panel p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+
+
+
+/* 小說和文章按鈕樣式 */
+.novel-buttons, .article-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.novel-btn, .article-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.novel-btn::before, .article-btn::before {
+  content: \'\';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #f093fb);
+  transform: translateX(-50%);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 1px;
+}
+
+.novel-btn:hover, .article-btn:hover,
+.novel-btn.active, .article-btn.active {
+  border-color: rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 147, 251, 0.1) 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+.novel-btn:hover::before, .article-btn:hover::before,
+.novel-btn.active::before, .article-btn.active::before {
+  width: 100%;
+}
+
+.novel-text, .article-text {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #cccccc;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left;
+  white-space: pre-wrap; /* 保留換行符 */
+}
+
+/* 關於我頁面樣式 */
+.about-me-panel {
+  min-height: 60vh; /* 確保頁面有足夠高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-me-panel h2 {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.about-me-panel p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+
