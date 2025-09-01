@@ -54,6 +54,7 @@
     <a href="#" data-page="music" tabindex="0">音樂創作</a>
     <a href="#" data-page="art" tabindex="0">藝術作品</a>
     <a href="#" data-page="games" tabindex="0">小遊戲</a>
+    <a href="#" data-page="about" tabindex="0">關於我</a>
   </nav>
 </header>
 
@@ -111,8 +112,14 @@
         <div class="sub-content-item">
           <h3>小說簡介展示</h3>
           <div class="novel-content">
-            <h4>Dust</h4>
-            <p>在這沉寂的世界中......無人生還
+            <div class="novel-buttons">
+              <button class="novel-btn" data-novel="dust">Dust</button>
+              <button class="novel-btn" data-novel="halo">光環律</button>
+              <button class="novel-btn" data-novel="survivor">倖存者偏差</button>
+              <button class="novel-btn" data-novel="narrator">喜歡劇透的旁白君</button>
+            </div>
+            <div class="novel-text" id="novel-dust">
+              <p>在這沉寂的世界中......無人生還
 沒有任何生機，消極的意識遍歷著每一個角落
 在這片近乎只有「灰」與「塵」的大地上
 僅存的生命勉強活著，只為等待氣絕的那一刻
@@ -128,8 +135,9 @@
 為了維持存在而互相記得讓彼此遺忘
 這世界的一切都平等的被拋棄，平等的被遺忘，直至消亡
 或許對他們而言，只能依靠灰一個個犧牲，直到讓世界煥發生機</p>
-            <h4>光環律</h4>
-            <p>所有人都會在成年洗禮時，獲得相應的「光環」
+            </div>
+            <div class="novel-text" id="novel-halo" style="display:none;">
+              <p>所有人都會在成年洗禮時，獲得相應的「光環」
 持有光環會清楚的認知到自己所扮演的「角色」
 主角光環，所有故事的中心
 一旦主角誕生，周遭的萬物都會為了迎合他而改變
@@ -138,8 +146,9 @@
 敘事權重的等級影響能改變世界的權限，機率、合理性、存在感、記憶等
 近乎世間萬物都能被敘事權重影響
 而光環律講述的是少女「蓮」在成年後沒有經過洗禮，作為世界之外的存在而努力生存的故事</p>
-            <h4>倖存者偏差</h4>
-            <p>世界無時無刻不在改變
+            </div>
+            <div class="novel-text" id="novel-survivor" style="display:none;">
+              <p>世界無時無刻不在改變
 便利商店的名稱變了，常去的餐廳朋友卻不記得，以為死了的人卻還活著
 蘋果變成了白色，雨水極其緩慢，原來的學生會長消失了
 這種現象我稱之為「偏差」
@@ -147,8 +156,9 @@
 記錄著這異常的世界，尋找偏差的規律
 與同樣能看見偏差的人相遇，一同建立了異常研究社「E.D.E.N」
 渡過日常與異常交織的故事</p>
-            <h4>喜歡劇透的旁白君</h4>
-            <p>歡迎回來
+            </div>
+            <div class="novel-text" id="novel-narrator" style="display:none;">
+              <p>歡迎回來
 那麼，再次向您簡單介紹，我叫「旁白君」，負責朗讀劇本、引導故事的人
 只不過呢...我有個壞毛病——
 我超愛劇透。
@@ -163,16 +173,20 @@
 觀眾的注視與支持，就是這個世界存在的理由。
 而我們製作組負責持續的創造劇本，好讓世界運行下去。
 究竟旁白君我、製作組與觀眾之間會有怎樣的劇本呢？好期待呀~</p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="sub-content" id="article-content">
         <div class="sub-content-item">
-          <h3>文章展示</h3>
+          <h3>文章作品展示</h3>
           <div class="article-content">
-            <h4>血緣的胎記</h4>
-            <p>我們帶著血緣的胎記降生，卻在學會書寫「愛」之前，先被刻上了「應當去愛」的古老咒語。
+            <div class="article-buttons">
+              <button class="article-btn" data-article="bloodmark">血緣的胎記</button>
+            </div>
+            <div class="article-text" id="article-bloodmark">
+              <p>我們帶著血緣的胎記降生，卻在學會書寫「愛」之前，先被刻上了「應當去愛」的古老咒語。
 世俗總將親情供奉在玻璃殿堂中
 母親的笑容永遠溫柔，父親的肩膀永遠可靠
 在他人眼中澄澈而美麗，可現實卻耐不住敲打。病房前遞藥的手或許顫抖著盤算遺產，年夜飯
@@ -200,6 +214,7 @@
 得何謂血緣與親情，只是本能驅動著，在廢墟上重建名為「家」的迷宮。這或許就是親情最真
 實的樣貌——毫無理由但也最原始的生命衝動。
 我們帶著血緣的胎記降生，也終將在學會「愛為何物」之後，選擇「真正的去愛」</p>
+            </div>
           </div>
         </div>
       </div>
@@ -208,7 +223,7 @@
         <div class="sub-content-item">
           <h3>敘事結構研究</h3>
           <div class="narrative-content">
-            <h4>樹狀敘事設計</h4>
+            <h4>樹狀敘事結構設計</h4>
             <p>具有無限延伸、可回溯性以及高自由度框架作為基礎
 六節點為一輪，可以是事件、世界觀、問題的解構形式等
 Seed（種子）：概念的基礎、事件的起點
@@ -275,8 +290,8 @@ Fruit（果實）：事件結局，答案，帶來改變、新的種子
       <!-- 子項內容區域 -->
       <div class="sub-content active" id="song-content">
         <div class="sub-content-item">
-          <h3>AI歌曲結合人工微調</h3>
-          <p>這裡將展示AI生成式歌曲。</p>
+          <h3>歌曲作品展示</h3>
+          <p>這裡將展示AI歌曲作品結合人工微調的成果</p>
           <div class="audio-player">
             <h4>いつかの日</h4>
             <audio controls src="assets/audio/ItsukaNoHi.mp3"></audio>
@@ -290,14 +305,14 @@ Fruit（果實）：事件結局，答案，帶來改變、新的種子
 
       <div class="sub-content" id="bgm-content">
         <div class="sub-content-item">
-          <h3>AI.bgm結合人工微調</h3>
-          <p>這裡將展示各種背景音樂，適用於不同場景和氛圍的音樂。</p>
+          <h3>背景音樂作品</h3>
+          <p>這裡將展示AI背景音樂創作結合人工微調的成果</p>
           <div class="audio-player">
-            <h4>Test</h4>
+            <h4>BA</h4>
             <audio controls src="assets/audio/BA.mp3"></audio>
             <h4>Fun.n.k</h4>
             <audio controls src="assets/audio/Funk.mp3"></audio>
-            <h4>Beauty</h4>
+            <h4>Midnight Symphony</h4>
             <audio controls src="assets/audio/MidnightSymphony.mp3"></audio>
           </div>
         </div>
@@ -348,7 +363,7 @@ Fruit（果實）：事件結局，答案，帶來改變、新的種子
       <div class="sub-content" id="webdesign-content">
         <div class="sub-content-item">
           <h3>網頁設計作品</h3>
-          <p>AI生成式網站</p>
+          <p>這裡將展示AI網站設計</p>
           <ul class="link-list">
             <li><a href="https://elnios-o4fu7l.manus.space/" target="_blank">Elnios 網站</a></li>
             <li><a href="https://dataviz-2h8vaf.manus.space/" target="_blank">數據可視化網站</a></li>
@@ -393,7 +408,7 @@ Fruit（果實）：事件結局，答案，帶來改變、新的種子
   </div>
 
   <!-- 數據管理頁面 -->
-  <div id="data-management" class="page">
+      <div id="data-management" class="page">
     <section class="data-panel" role="region" aria-label="數據管理">
       <h2>數據管理</h2>
       
@@ -424,10 +439,19 @@ Fruit（果實）：事件結局，答案，帶來改變、新的種子
       </div>
     </section>
   </div>
+
+  <!-- 關於我頁面 -->
+  <div id="about" class="page">
+    <section class="content-panel about-me-panel" role="region" aria-label="關於我">
+      <h2>關於我</h2>
+      <!-- 這裡可以放置關於我的內容，目前為空 -->
+    </section>
+  </div>
 </main>
 
 <footer>
   <p>&copy; 2025 林長陞. All rights reserved</p>
+  <p>電話: 0909463030 | Email: truth.qq.com.tw@gmail.com</p>
   <a href="#" class="data-management-link" data-page="data-management">數據管理</a>
 </footer>
 
@@ -435,3 +459,4 @@ Fruit（果實）：事件結局，答案，帶來改變、新的種子
 
 </body>
 </html>
+
