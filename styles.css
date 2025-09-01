@@ -1151,6 +1151,9 @@ footer {
   margin: 20px auto;
   text-align: justify;      /* 文字兩端對齊 */
   word-break: keep-all;     /* 保留整個詞彙，不要拆字 */
+  white-space: normal;       /* 正常換行 */
+}
+
 }
 
 
