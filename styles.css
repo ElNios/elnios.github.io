@@ -1143,13 +1143,16 @@ footer {
   text-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
 
-.about-me-panel p {
-  font-size: 1.3rem;    /* 調大一點 */
-  color: #f5f5f5;       /* 接近白色 */
-  max-width: 900px;     /* 讓段落更寬 */
-  margin: 0 auto;
-  line-height: 2;       /* 增加行距，閱讀更舒服 */
+.about-text {
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  line-height: 2;
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: justify;      /* 文字兩端對齊 */
+  word-break: keep-all;     /* 保留整個詞彙，不要拆字 */
 }
+
 
 
 
