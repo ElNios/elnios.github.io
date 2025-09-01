@@ -31,7 +31,8 @@ const CHINESE_LABELS = {
   'art': '藝術作品',
   'games': '小遊戲',
   'data-management': '數據管理',
-  'home': '首頁'
+  'home': '首頁',
+  'about': '關於我'
 };
 
 // ===================== 性能優化工具 =====================
@@ -324,27 +325,53 @@ function showSubContent(pageId, subId) {
   if (!page) return;
   
   // 隱藏所有子內容
-  page.querySelectorAll('.sub-content').forEach(content => {
-    content.classList.remove('active');
+  page.querySelectorAll(".sub-content").forEach(content => {
+    content.classList.remove("active");
   });
   
   // 顯示目標子內容
   const targetContent = document.getElementById(`${subId}-content`);
   if (targetContent) {
-    targetContent.classList.add('active');
+    targetContent.classList.add("active");
   }
   
   // 更新子導航狀態
-  page.querySelectorAll('.sub-nav-item').forEach(item => {
-    item.classList.remove('active');
+  page.querySelectorAll(".sub-nav-item").forEach(item => {
+    item.classList.remove("active");
   });
   
   const activeSubNav = page.querySelector(`.sub-nav-item[data-sub="${subId}"]`);
   if (activeSubNav) {
-    activeSubNav.classList.add('active');
+    activeSubNav.classList.add("active");
   }
   
   currentSubItem[pageId] = subId;
+}
+
+// 顯示小說內容
+function showNovelContent(novelId) {
+  document.querySelectorAll(".novel-text").forEach(text => {
+    text.style.display = "none";
+  });
+  document.getElementById(`novel-${novelId}`).style.display = "block";
+
+  document.querySelectorAll(".novel-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+  document.querySelector(`.novel-btn[data-novel="${novelId}"]`).classList.add("active");
+}
+
+// 顯示文章內容
+function showArticleContent(articleId) {
+  document.querySelectorAll(".article-text").forEach(text => {
+    text.style.display = "none";
+  });
+  document.getElementById(`article-${articleId}`).style.display = "block";
+
+  document.querySelectorAll(".article-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+  document.querySelector(`.article-btn[data-article="${articleId}"]`).classList.add("active");
 }
 
 // ===================== 事件監聽器 =====================
@@ -360,12 +387,30 @@ function initEventListeners() {
     }
     
     // 子項導航點擊事件
-    const subTarget = e.target.closest('[data-sub]');
+    const subTarget = e.target.closest("[data-sub]");
     if (subTarget) {
       e.preventDefault();
       const subId = subTarget.dataset.sub;
       showSubContent(currentPage, subId);
       trackClick(`子項-${subId}`);
+    }
+
+    // 小說按鈕點擊事件
+    const novelBtn = e.target.closest(".novel-btn");
+    if (novelBtn) {
+      e.preventDefault();
+      const novelId = novelBtn.dataset.novel;
+      showNovelContent(novelId);
+      trackClick(`子項-novel-${novelId}`);
+    }
+
+    // 文章按鈕點擊事件
+    const articleBtn = e.target.closest(".article-btn");
+    if (articleBtn) {
+      e.preventDefault();
+      const articleId = articleBtn.dataset.article;
+      showArticleContent(articleId);
+      trackClick(`子項-article-${articleId}`);
     }
   });
 
@@ -419,6 +464,10 @@ function initializeWebsite() {
     initMouseGlow();
     animateClickParticles(); // 添加點擊粒子特效
     initEventListeners();
+
+    // 初始化小說和文章內容顯示
+    showNovelContent('dust');
+    showArticleContent('bloodmark');
     
     // 啟動動畫循環
     startAnimationLoop();
